@@ -1,0 +1,5 @@
+{
+  "name": "Salto de Cuerda: El Reloj",
+  "description": "Un juego arcade de supervivencia multijugador. Salta sobre la manecilla del reloj, sobrevive a los cambios de sentido y aguanta más que tus amigos en el móvil.",
+  "requestFramePermissions": []
+}
