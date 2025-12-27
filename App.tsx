@@ -14,6 +14,7 @@ const App: React.FC = () => {
     difficulty: Difficulty.NORMAL,
   });
   const [highScores, setHighScores] = useState<ScoreEntry[]>([]);
+  const [lastScores, setLastScores] = useState<{ id: number, score: number }[]>([]);
 
   useEffect(() => {
     const saved = localStorage.getItem('jump_rope_highscores');
@@ -41,6 +42,7 @@ const App: React.FC = () => {
   };
 
   const handleGameOver = (finalScores: { id: number, score: number }[]) => {
+    setLastScores(finalScores);
     if (settings.playerCount === 1) {
       saveScore('Player 1', finalScores[0].score);
     }
@@ -64,6 +66,7 @@ const App: React.FC = () => {
       {gameState === GameState.GAME_OVER && (
         <GameOver 
           settings={settings} 
+          finalScores={lastScores}
           onRestart={() => setGameState(GameState.PLAYING)} 
           onMenu={() => setGameState(GameState.MENU)}
         />

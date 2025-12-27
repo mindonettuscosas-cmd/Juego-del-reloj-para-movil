@@ -12,6 +12,34 @@ export const PLAYER_COLORS = [
   '#f97316', // Orange
 ];
 
+export const GAME_OVER_POOL = {
+  loser: [
+    "¿Saltabas o echabas raíces?",
+    "Mi gato tiene más reflejos muerto.",
+    "¿Te pesan las botas de plomo?",
+    "Vaya desastre de coordinación.",
+    "El suelo y tú sois mejores amigos.",
+    "¿Has probado a usar los ojos?",
+    "Nivel: Planta ornamental."
+  ],
+  average: [
+    "Ni fú ni fá, un humano corriente.",
+    "Aceptable... para alguien con sueño.",
+    "Has durado más de lo que esperaba (que era nada).",
+    "Meh. Un poco de ritmo no te vendría mal.",
+    "Casi pareces un deportista. Casi.",
+    "Sigue practicando, todavía das pena."
+  ],
+  winner: [
+    "Suerte de principiante, seguro.",
+    "¿No tienes nada mejor que hacer con tu vida?",
+    "Vaya pro... se nota que no sales mucho a la calle.",
+    "Has ganado, pero sigues siendo un patoso.",
+    "Hacker. Nadie salta tanto de forma natural.",
+    "¡Deja de lucirte, es solo una cuerda!"
+  ]
+};
+
 export const DIFFICULTY_CONFIG = {
   [Difficulty.EASY]: {
     baseSpeed: 0.015,
@@ -35,5 +63,5 @@ export const DIFFICULTY_CONFIG = {
 
 export const JUMP_DURATION = 550; // ms
 export const JUMP_COOLDOWN = 100; // ms
-export const COLLISION_THRESHOLD = 0.25; // radianes
+export const COLLISION_THRESHOLD = 0.25; 
 export const ROPE_HEIGHT = 15;
